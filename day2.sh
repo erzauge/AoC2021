@@ -1,0 +1,2 @@
+awk '{switch ($1){case "up": y-=$2; break; case "down": y+=$2; break;case "forward": x+=$2; break}} END {print x "\t" y "\t" x*y}' day2.dat
+awk '{switch ($1){case "up": aim-=$2; break; case "down": aim+=$2; break;case "forward": x+=$2; y+=aim*$2; break}} END {print x "\t" y "\t" x*y}' day2.dat
