@@ -28,23 +28,23 @@ pub fn solve(){
         let mut set = HashSet::new();
         let mut buffer =vec![i];
         while let Some((x,y)) = buffer.pop() {
-            if (*map.get((x as i32 -1) as usize).unwrap_or(&empty).get(y).unwrap_or(&9)<9){
-                if (!set.contains(&(((x as i32 -1) as usize),y))) {
+            if *map.get((x as i32 -1) as usize).unwrap_or(&empty).get(y).unwrap_or(&9)<9 {
+                if !set.contains(&(((x as i32 -1) as usize),y)) {
                     buffer.push((((x as i32 -1) as usize),y));
                 }
             }
-            if (*map.get(x+1).unwrap_or(&empty).get(y).unwrap_or(&9)<9){
-                if (!set.contains(&(x+1,y))) {
+            if *map.get(x+1).unwrap_or(&empty).get(y).unwrap_or(&9)<9{
+                if !set.contains(&(x+1,y)) {
                     buffer.push((x+1,y));
                 }
             }
-            if (*map.get(x).unwrap_or(&empty).get((y as i32 -1) as usize).unwrap_or(&9)<9){
-                if (!set.contains(&(x,(y as i32 -1) as usize))) {
+            if *map.get(x).unwrap_or(&empty).get((y as i32 -1) as usize).unwrap_or(&9)<9{
+                if !set.contains(&(x,(y as i32 -1) as usize)) {
                     buffer.push((x,((y as i32 -1) as usize)));
                 }
             }
-            if (*map.get(x).unwrap_or(&empty).get(y+1).unwrap_or(&9)<9){
-                if (!set.contains(&(x,y+1))) {
+            if *map.get(x).unwrap_or(&empty).get(y+1).unwrap_or(&9)<9{
+                if !set.contains(&(x,y+1)) {
                     buffer.push((x,y+1));
                 }
             }
