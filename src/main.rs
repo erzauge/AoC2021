@@ -29,4 +29,6 @@ fn main() {
     day10::solve();
     println!("\u{1b}[32m Day11 \x1b[m");
     day11::solve();
+    println!("\u{1b}[32m Day12 \x1b[m");
+    day12::solve();
 }
