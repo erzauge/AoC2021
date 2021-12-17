@@ -11,6 +11,7 @@ mod day12;
 mod day13;
 mod day14;
 mod day15;
+mod day16;
 
 
 fn main() {
@@ -40,4 +41,6 @@ fn main() {
     day14::solve();
     println!("\u{1b}[32m Day15 \x1b[m");
     day15::solve();
+    println!("\u{1b}[32m Day16 \x1b[m");
+    day16::solve();
 }
